@@ -18,8 +18,8 @@ namespace Vacal
         static async Task SpeechToEng()
         {
             Console.WriteLine("Fale Algo");
-            var speechConfig = SpeechTranslationConfig.FromSubscription("6b383acf5bcf42a28367858bbcdddc18"
-                , "northcentralus");
+            var speechConfig = SpeechTranslationConfig.FromSubscription("SubscritionID"
+                , "Local da Onde Foi criado o recurso");
             speechConfig.SpeechRecognitionLanguage = "pt-BR";
 
             //speechConfig.AddTargetLanguage("en-US");
@@ -42,8 +42,8 @@ namespace Vacal
 
             static async Task SpeechToText()
         {
-            var speechConfig = SpeechConfig.FromSubscription("6b383acf5bcf42a28367858bbcdddc18"
-                , "northcentralus");
+            var speechConfig = SpeechConfig.FromSubscription("SubscritionID"
+                , "Local da Onde Foi criado o recurso");
             var audioConfig = AudioConfig.FromDefaultMicrophoneInput();
             var recognizer = new SpeechRecognizer(speechConfig, "pt-BR", audioConfig);
             Console.WriteLine("Falai alguma coisa:");
